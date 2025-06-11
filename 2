@@ -1,1 +1,303 @@
-2 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amal Jyothi College of Engineering - Home</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for font and smooth scrolling */
+        body {
+            font-family: "Inter", sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8faff; /* Light background for the whole page */
+        }
+        /* Style for active navigation link */
+        .nav-link.active {
+            font-weight: bold;
+            color: #2563eb; /* Blue color for active link */
+            border-bottom: 2px solid #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-700 to-blue-900 text-white p-4 shadow-lg fixed w-full z-10 top-0">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-extrabold mb-2 md:mb-0">Amal Jyothi College of Engineering</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="#home" class="nav-link hover:text-blue-200 transition duration-300">Home</a></li>
+                    <li><a href="#courses" class="nav-link hover:text-blue-200 transition duration-300">Courses</a></li>
+                    <li><a href="#departments" class="nav-link hover:text-blue-200 transition duration-300">Departments</a></li>
+                    <li><a href="#faculty" class="nav-link hover:text-blue-200 transition duration-300">Faculty</a></li>
+                    <li><a href="#library" class="nav-link hover:text-blue-200 transition duration-300">Library</a></li>
+                    <li><a href="#contact" class="nav-link hover:text-blue-200 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://placehold.co/1920x1080/4F46E5/FFFFFF?text=Welcome+to+Amal+Jyothi'); background-attachment: fixed; margin-top: 64px;">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto text-center relative z-10 p-6 rounded-xl bg-gray-900 bg-opacity-70 shadow-2xl">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down">Welcome to <span class="text-blue-300">Amal Jyothi College of Engineering</span></h2>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">Empowering minds, building futures, shaping leaders.</p>
+            <a href="#courses" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Explore Our Programs</a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Diverse Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course Card 1 -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-4">Computer Science Engineering</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Our CSE program offers a comprehensive curriculum covering algorithms, data structures, software engineering, artificial intelligence, and machine learning. Students gain hands-on experience with cutting-edge technologies.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Advanced Programming</li>
+                        <li>Database Management</li>
+                        <li>Web Development</li>
+                        <li>Cyber Security</li>
+                    </ul>
+                </div>
+                <!-- Course Card 2 -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Electronics & Communication Engineering</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Focuses on analog and digital electronics, communication systems, signal processing, and integrated circuit design. Prepare for careers in telecommunications, embedded systems, and more.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Digital Signal Processing</li>
+                        <li>VLSI Design</li>
+                        <li>Wireless Communication</li>
+                        <li>Embedded Systems</li>
+                    </ul>
+                </div>
+                <!-- Course Card 3 -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4">Mechanical Engineering</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A robust program exploring mechanics, thermodynamics, robotics, and manufacturing processes. Our labs provide practical exposure to design and analysis tools.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Thermodynamics</li>
+                        <li>Robotics & Automation</li>
+                        <li>CAD/CAM</li>
+                        <li>Fluid Mechanics</li>
+                    </ul>
+                </div>
+                <!-- Course Card 4 -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-orange-700 mb-4">Civil Engineering</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Covers structural engineering, transportation, environmental engineering, and construction management. Students learn to design and build essential infrastructure.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Structural Analysis</li>
+                        <li>Transportation Engineering</li>
+                        <li>Water Resources</li>
+                        <li>Geotechnical Engineering</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Academic Departments</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Department of Computer Science</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Pioneering research and education in computing, our Computer Science department offers cutting-edge programs in AI, machine learning, cybersecurity, and software development. We foster innovation and critical thinking, preparing students for the challenges of the digital age.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Department of Electronics & Communication</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Dedicated to advancing knowledge in electronics, communication, and signal processing. Our department emphasizes hands-on learning and industry collaboration, equipping students with the skills for a rapidly evolving technological landscape.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Department of Mechanical Engineering</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A hub for innovation in mechanical design, manufacturing, and thermal sciences. The Mechanical Engineering department focuses on practical applications and problem-solving, preparing graduates for diverse roles in various industries.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Department of Civil Engineering</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Building the future, one structure at a time. The Civil Engineering department covers fundamental principles and advanced techniques in structural analysis, environmental engineering, and transportation infrastructure, creating competent professionals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Meet Our Esteemed Faculty</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Faculty Card 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center border border-gray-200">
+                    <img src="https://placehold.co/150x150/E0E7FF/4338CA?text=Dr.+Smith" alt="Dr. Jane Smith" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Dr. Jane Smith</h3>
+                    <p class="text-blue-600">Head of Computer Science</p>
+                    <p class="text-gray-600 text-sm mt-2">Specialization: Artificial Intelligence, Data Science</p>
+                </div>
+                <!-- Faculty Card 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center border border-gray-200">
+                    <img src="https://placehold.co/150x150/E0E7FF/10B981?text=Prof.+Johnson" alt="Prof. David Johnson" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Prof. David Johnson</h3>
+                    <p class="text-green-600">Dept. of ECE</p>
+                    <p class="text-gray-600 text-sm mt-2">Specialization: Wireless Communication, IoT</p>
+                </div>
+                <!-- Faculty Card 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center border border-gray-200">
+                    <img src="https://placehold.co/150x150/E0E7FF/8B5CF6?text=Dr.+Williams" alt="Dr. Emily Williams" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-purple-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Dr. Emily Williams</h3>
+                    <p class="text-purple-600">Dept. of Mechanical Engineering</p>
+                    <p class="text-gray-600 text-sm mt-2">Specialization: Robotics, Advanced Manufacturing</p>
+                </div>
+                <!-- Faculty Card 4 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center border border-gray-200">
+                    <img src="https://placehold.co/150x150/E0E7FF/EF4444?text=Prof.+Brown" alt="Prof. Michael Brown" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-red-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Prof. Michael Brown</h3>
+                    <p class="text-red-600">Dept. of Civil Engineering</p>
+                    <p class="text-gray-600 text-sm mt-2">Specialization: Structural Engineering, Sustainable Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Section -->
+    <section id="library" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our State-of-the-Art Library</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:mr-8">
+                    <img src="https://placehold.co/600x400/C4B5FD/4F46E5?text=Amal+Jyothi+Library" alt="College Library" class="w-full h-auto rounded-lg shadow-lg object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                        The Amal Jyothi College of Engineering Library is a modern hub for learning and research, offering a vast collection of books, journals, and digital resources. With comfortable study spaces, access to online databases, and dedicated support staff, it's designed to cater to the diverse academic needs of our students and faculty.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 text-base space-y-2">
+                        <li>Over 100,000 print volumes</li>
+                        <li>Access to 50,000+ e-journals and databases</li>
+                        <li>Digital archives and multimedia resources</li>
+                        <li>Quiet study zones and group discussion rooms</li>
+                        <li>High-speed internet access and computer labs</li>
+                    </ul>
+                    <a href="#" class="mt-6 inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full shadow-md transition duration-300">Learn More About Library</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
+            <p class="text-lg mb-4">Have questions? We'd love to hear from you!</p>
+            <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-4 md:space-y-0">
+                <div class="bg-blue-800 p-6 rounded-lg shadow-md w-full md:w-auto">
+                    <h3 class="text-xl font-semibold mb-2">Address</h3>
+                    <p>Amal Jyothi College of Engineering, Koovappally, Kottayam, Kerala 686518</p>
+                    <p>India</p>
+                </div>
+                <div class="bg-blue-800 p-6 rounded-lg shadow-md w-full md:w-auto">
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p>info@amaljyothi.ac.in</p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Phone</h3>
+                    <p>+91 (482) 2233777</p>
+                </div>
+            </div>
+            <form class="mt-12 max-w-lg mx-auto bg-blue-800 p-8 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-md bg-blue-700 border border-blue-600 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-md bg-blue-700 border border-blue-600 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-md bg-blue-700 border border-blue-600 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-400 hover:bg-blue-500 text-blue-900 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 Amal Jyothi College of Engineering. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Terms of Service</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for active navigation link styling
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            // Function to update active link
+            function updateActiveLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.querySelector('header').offsetHeight; // Adjust for fixed header
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.href.includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Initial call and on scroll
+            updateActiveLink();
+            window.addEventListener('scroll', updateActiveLink);
+
+            // Smooth scroll for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+ 
