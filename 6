@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Chronicles</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and overall page background */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+            line-height: 1.6;
+        }
+        /* Style for interactive elements on hover */
+        .hover-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 6px 10px -3px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header Section -->
+    <header class="bg-blue-800 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-4xl font-extrabold mb-2 md:mb-0">Wanderlust Chronicles</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300">Destinations</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300">Travel Tips</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300">About</a></li>
+                    <li><a href="#" class="hover:text-blue-300 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto flex-grow grid grid-cols-1 md:grid-cols-3 gap-8 py-8 px-4">
+        <!-- Blog Posts Section -->
+        <section class="md:col-span-2 space-y-8">
+            <!-- Blog Post 1: Exploring Ancient Ruins -->
+            <article class="bg-white p-6 rounded-lg shadow-md hover-card transition duration-300 border border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-800 mb-3"><a href="#" class="hover:text-blue-700">Journey Through Peru: Unveiling Ancient Ruins</a></h2>
+                <p class="text-gray-600 text-sm mb-4">Published on <time datetime="2025-06-12">June 12, 2025</time> by Alex Rivera</p>
+                <img src="https://placehold.co/800x400/E0E7FF/4338CA?text=Machu+Picchu" alt="Machu Picchu" class="w-full h-48 object-cover rounded-md mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Embark on an unforgettable adventure as we explore the breathtaking ancient ruins of Peru. From the mystical citadel of Machu Picchu to the vibrant streets of Cusco, discover the rich history and stunning landscapes that define this incredible destination.
+                </p>
+                <a href="#" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">#Peru</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">#AncientCivilizations</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">#SouthAmerica</span>
+                </div>
+            </article>
+
+            <!-- Blog Post 2: Solo Travel Tips -->
+            <article class="bg-white p-6 rounded-lg shadow-md hover-card transition duration-300 border border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-800 mb-3"><a href="#" class="hover:text-blue-700">Navigating the World Alone: Essential Solo Travel Tips</a></h2>
+                <p class="text-gray-600 text-sm mb-4">Published on <time datetime="2025-06-10">June 10, 2025</time> by Maya Singh</p>
+                <img src="https://placehold.co/800x400/D1FAE5/059669?text=Solo+Traveler" alt="Solo Traveler" class="w-full h-48 object-cover rounded-md mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Considering your first solo trip? This guide offers practical advice, safety tips, and inspiration for experiencing the freedom and growth that comes with exploring new places on your own terms. Conquer your fears and embrace the journey!
+                </p>
+                <a href="#" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">#SoloTravel</span>
+                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">#TravelTips</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">#Adventure</span>
+                </div>
+            </article>
+
+            <!-- New Blog Post: European Road Trip -->
+            <article class="bg-white p-6 rounded-lg shadow-md hover-card transition duration-300 border border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-800 mb-3"><a href="#" class="hover:text-blue-700">An Epic European Road Trip: Castles, Coasts, and Cuisine</a></h2>
+                <p class="text-gray-600 text-sm mb-4">Published on <time datetime="2025-06-08">June 08, 2025</time> by David Chen</p>
+                <img src="https://placehold.co/800x400/C7D2FE/4F46E5?text=Europe+Road+Trip" alt="Europe Road Trip" class="w-full h-48 object-cover rounded-md mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Hit the open road across Europe! From the dramatic cliffs of the Amalfi Coast to the fairytale castles of Bavaria and the culinary delights of Paris, this post maps out an unforgettable journey through some of Europe's most iconic destinations.
+                </p>
+                <a href="#" class="text-blue-600 hover:underline font-semibold">Read More &rarr;</a>
+                <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full">#Europe</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">#RoadTrip</span>
+                    <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full">#Destinations</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sidebar Section -->
+        <aside class="md:col-span-1 space-y-8">
+            <!-- Search Widget -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Search</h3>
+                <input type="text" placeholder="Search travel guides..." class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <button class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md shadow-md transition duration-300">Search</button>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Categories</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li><a href="#" class="hover:text-blue-600 transition duration-300">Destinations (5)</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition duration-300">Travel Tips (8)</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition duration-300">Adventure (3)</a></li>
+                    <li><a href="#" class="hover:text-blue-600 transition duration-300">Culture (7)</a></li>
+                </ul>
+            </div>
+
+            <!-- Recent Posts Widget -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Recent Posts</h3>
+                <ul class="space-y-3">
+                    <li class="border-b pb-2 border-gray-100 last:border-b-0 last:pb-0">
+                        <a href="#" class="text-blue-600 hover:underline font-medium">Top 5 Hidden Gems in Asia</a>
+                        <p class="text-gray-500 text-sm">June 11, 2025</p>
+                    </li>
+                    <li class="border-b pb-2 border-gray-100 last:border-b-0 last:pb-0">
+                        <a href="#" class="text-blue-600 hover:underline font-medium">Packing Light: A Traveler's Guide</a>
+                        <p class="text-gray-500 text-sm">June 9, 2025</p>
+                    </li>
+                    <li class="border-b pb-2 border-gray-100 last:border-b-0 last:pb-0">
+                        <a href="#" class="text-blue-600 hover:underline font-medium">Exploring the Amazon Rainforest</a>
+                        <p class="text-gray-500 text-sm">June 7, 2025</p>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8 mt-auto">
+        <div class="container mx-auto text-center text-sm px-4">
+            <p>&copy; 2025 Wanderlust Chronicles. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Terms of Service</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
