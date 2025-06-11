@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Pala, Kerala</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and smooth scrolling */
+        body {
+            font-family: "Inter", sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8faff; /* Light background for the whole page */
+        }
+        /* Style for active navigation link (if implemented, though not for simple page yet) */
+        .nav-link.active {
+            font-weight: bold;
+            color: #2563eb; /* Blue color for active link */
+            border-bottom: 2px solid #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-teal-600 to-emerald-800 text-white p-4 shadow-lg fixed w-full z-10 top-0">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-extrabold mb-2 md:mb-0">Welcome to Pala, Kerala</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="#home" class="nav-link hover:text-teal-200 transition duration-300">Home</a></li>
+                    <li><a href="#about" class="nav-link hover:text-teal-200 transition duration-300">About</a></li>
+                    <li><a href="#attractions" class="nav-link hover:text-teal-200 transition duration-300">Attractions</a></li>
+                    <li><a href="#contact" class="nav-link hover:text-teal-200 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://placehold.co/1920x1080/285E61/FFFFFF?text=Scenic+View+of+Pala'); background-attachment: fixed; margin-top: 64px;">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto text-center relative z-10 p-6 rounded-xl bg-gray-900 bg-opacity-70 shadow-2xl">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down">Discover the Charm of <span class="text-emerald-300">Pala</span></h2>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">A vibrant town in Kerala, known for its rich cultural heritage and beautiful landscapes.</p>
+            <a href="#about" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Learn More About Us</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">About Pala</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://placehold.co/600x400/6EE7B7/065F46?text=Pala+Landmark" alt="Pala Landmark" class="w-full h-auto rounded-lg shadow-lg object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                        Pala is a picturesque town nestled in the heart of Kottayam district in Kerala, India. Known for its friendly residents, serene landscapes, and vibrant rubber plantations, Pala offers a unique blend of traditional charm and modern amenities. From historical churches and temples to thriving local businesses, there's always something new to explore.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        Our community prides itself on its strong sense of togetherness, its rich agricultural heritage, and its commitment to educational excellence. Whether you're a long-time resident or a first-time visitor, you'll feel right at home in Pala.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Must-Visit Attractions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Attraction 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
+                    <img src="https://placehold.co/400x250/C7D2FE/4F46E5?text=St.+Thomas+Cathedral" alt="St. Thomas Cathedral" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-teal-700 mb-2">St. Thomas Cathedral</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A magnificent church, one of the oldest and most revered landmarks in Pala, known for its stunning architecture and historical significance.
+                    </p>
+                </div>
+                <!-- Attraction 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
+                    <img src="https://placehold.co/400x250/FEE2E2/EF4444?text=Meenachil+River" alt="Meenachil River" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-emerald-700 mb-2">The Scenic Meenachil River</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Enjoy serene views along the Meenachil River, which flows through Pala, offering picturesque spots for relaxation and local life.
+                    </p>
+                </div>
+                <!-- Attraction 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
+                    <img src="https://placehold.co/400x250/D1FAE5/059669?text=Kadappattoor+Church" alt="Kadappattoor Church" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Kadappattoor Sree Mahadeva Temple</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A renowned ancient temple dedicated to Lord Shiva, attracting devotees and visitors with its spiritual ambiance and traditional architecture.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-teal-600 to-emerald-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Connect With Us</h2>
+            <p class="text-lg mb-4">We're eager to share more about our wonderful hometown!</p>
+            <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-4 md:space-y-0">
+                <div class="bg-teal-800 p-6 rounded-lg shadow-md w-full md:w-auto">
+                    <h3 class="text-xl font-semibold mb-2">Address</h3>
+                    <p>Pala, Kottayam District</p>
+                    <p>Kerala 686575, India</p>
+                </div>
+                <div class="bg-teal-800 p-6 rounded-lg shadow-md w-full md:w-auto">
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p>info@pala.gov.in</p>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Phone</h3>
+                    <p>+91 (4822) XXXXXX (placeholder)</p>
+                </div>
+            </div>
+            <form class="mt-12 max-w-lg mx-auto bg-teal-800 p-8 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-md bg-teal-700 border border-teal-600 text-white placeholder-teal-200 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-md bg-teal-700 border border-teal-600 text-white placeholder-teal-200 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-md bg-teal-700 border border-teal-600 text-white placeholder-teal-200 focus:outline-none focus:ring-2 focus:ring-400"></textarea>
+                </div>
+                <button type="submit" class="bg-emerald-400 hover:bg-emerald-500 text-teal-900 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 Pala Tourism. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-teal-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-teal-400 transition duration-300">Terms of Use</a>
+                <a href="#" class="hover:text-teal-400 transition duration-300">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Basic script for smooth scrolling (can be expanded for active nav links)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const headerOffset = document.querySelector('header').offsetHeight; // Account for fixed header
+
+                if (targetElement) {
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
 
