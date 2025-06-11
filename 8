@@ -1,1 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Planner</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and overall page background */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+            line-height: 1.6;
+        }
+        /* Style for active navigation link */
+        .nav-link.active {
+            font-weight: bold;
+            color: #2563eb; /* Blue color for active link */
+            border-bottom: 2px solid #2563eb;
+        }
+        /* Style for the To-Do List items */
+        .todo-item.completed {
+            text-decoration: line-through;
+            color: #6b7280; /* Gray out completed tasks */
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header Section -->
+    <header class="bg-blue-800 text-white p-4 shadow-lg fixed w-full z-10 top-0">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-extrabold mb-2 md:mb-0">Academic Planner</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="#home" class="nav-link hover:text-blue-300 transition duration-300">Home</a></li>
+                    <li><a href="#subjects" class="nav-link hover:text-blue-300 transition duration-300">Subjects</a></li>
+                    <li><a href="#todo" class="nav-link hover:text-blue-300 transition duration-300">To-Do List</a></li>
+                    <li><a href="#calendar" class="nav-link hover:text-blue-300 transition duration-300">Calendar</a></li>
+                    <li><a href="#timer" class="nav-link hover:text-blue-300 transition duration-300">Study Timer</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main class="container mx-auto flex-grow py-8 px-4 mt-16">
+
+        <!-- Home Section -->
+        <section id="home" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center border border-gray-200">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Welcome, Student!</h2>
+            <p id="motivational-quote" class="text-xl italic text-gray-700 mb-6">"The beautiful thing about learning is that no one can take it away from you." - B.B. King</p>
+            <button id="change-quote-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300">New Quote</button>
+        </section>
+
+        <!-- Subjects Page Section -->
+        <section id="subjects" class="bg-white p-8 rounded-lg shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">My Subjects & Grades</h2>
+            <div id="subjects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Subject cards will be dynamically loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section id="todo" class="bg-white p-8 rounded-lg shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">My To-Do List</h2>
+            <div class="flex flex-col md:flex-row gap-4 mb-6">
+                <input type="text" id="todo-input" placeholder="Add a new task..." class="flex-grow p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <button id="add-todo-btn" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-md shadow-md transition duration-300">Add Task</button>
+            </div>
+            <ul id="todo-list" class="space-y-3">
+                <!-- To-Do items will be dynamically loaded here by JavaScript -->
+            </ul>
+        </section>
+
+        <!-- Calendar View Section -->
+        <section id="calendar" class="bg-white p-8 rounded-lg shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Academic Calendar</h2>
+            <div class="grid grid-cols-7 gap-1 text-center">
+                <!-- Days of the week header -->
+                <div class="font-bold text-gray-700 p-2 bg-gray-100 rounded-tl-md">Sun</div>
+                <div class="font-bold text-gray-700 p-2 bg-gray-100">Mon</div>
+                <div class="font-bold text-gray-700 p-2 bg-gray-100">Tue</div>
+                <div class="font-bold text-gray-700 p-2 bg-gray-100">Wed</div>
+                <div class="font-bold text-gray-700 p-2 bg-gray-100">Thu</div>
+                <div class="font-bold text-gray-700 p-2 bg-gray-100">Fri</div>
+                <div class="font-bold text-gray-700 p-2 bg-gray-100 rounded-tr-md">Sat</div>
+
+                <!-- Example Calendar Days (placeholder) -->
+                <!-- Fill in blank days for previous month -->
+                <div class="p-2 text-gray-400">28</div>
+                <div class="p-2 text-gray-400">29</div>
+                <div class="p-2 text-gray-400">30</div>
+                <div class="p-2 text-gray-400">31</div>
+
+                <!-- Current Month Days -->
+                <div class="p-2 bg-blue-50 rounded-md">1</div>
+                <div class="p-2 bg-blue-50 rounded-md">2</div>
+                <div class="p-2 bg-blue-50 rounded-md">3</div>
+                <div class="p-2 bg-blue-50 rounded-md">4</div>
+                <div class="p-2 bg-blue-50 rounded-md">5</div>
+                <div class="p-2 bg-blue-50 rounded-md">6</div>
+                <div class="p-2 bg-blue-50 rounded-md">7</div>
+                <div class="p-2 bg-blue-50 rounded-md">8</div>
+                <div class="p-2 bg-blue-50 rounded-md">9</div>
+                <div class="p-2 bg-blue-50 rounded-md">10</div>
+                <div class="p-2 bg-blue-50 rounded-md">11</div>
+                <div class="p-2 bg-blue-50 rounded-md text-blue-800 font-semibold border-2 border-blue-500">12 <!-- Current Day --></div>
+                <div class="p-2 bg-blue-50 rounded-md">13</div>
+                <div class="p-2 bg-blue-50 rounded-md">14</div>
+                <div class="p-2 bg-blue-50 rounded-md">15</div>
+                <div class="p-2 bg-blue-50 rounded-md">16</div>
+                <div class="p-2 bg-blue-50 rounded-md">17</div>
+                <div class="p-2 bg-blue-50 rounded-md">18</div>
+                <div class="p-2 bg-blue-50 rounded-md">19</div>
+                <div class="p-2 bg-blue-50 rounded-md">20</div>
+                <div class="p-2 bg-blue-50 rounded-md">21</div>
+                <div class="p-2 bg-blue-50 rounded-md">22</div>
+                <div class="p-2 bg-blue-50 rounded-md">23</div>
+                <div class="p-2 bg-blue-50 rounded-md">24</div>
+                <div class="p-2 bg-blue-50 rounded-md">25</div>
+                <div class="p-2 bg-blue-50 rounded-md">26</div>
+                <div class="p-2 bg-blue-50 rounded-md">27</div>
+                <div class="p-2 bg-blue-50 rounded-md">28</div>
+                <div class="p-2 bg-blue-50 rounded-md">29</div>
+                <div class="p-2 bg-blue-50 rounded-md">30</div>
+                <div class="p-2 bg-blue-50 rounded-md">31</div>
+                <!-- Fill in blank days for next month -->
+                <div class="p-2 text-gray-400">1</div>
+                <div class="p-2 text-gray-400">2</div>
+                <div class="p-2 text-gray-400">3</div>
+            </div>
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Upcoming Deadlines/Events:</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="bg-gray-100 p-3 rounded-md border border-gray-200">
+                        <span class="font-semibold">June 20:</span> Project Alpha Submission
+                    </li>
+                    <li class="bg-gray-100 p-3 rounded-md border border-gray-200">
+                        <span class="font-semibold">June 25:</span> Midterm Exam - Calculus I
+                    </li>
+                    <li class="bg-gray-100 p-3 rounded-md border border-gray-200">
+                        <span class="font-semibold">July 01:</span> Group Meeting - Database Design
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Study Timer Section (Pomodoro) -->
+        <section id="timer" class="bg-white p-8 rounded-lg shadow-lg mb-8 text-center border border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Study Timer (Pomodoro)</h2>
+            <div class="text-6xl font-extrabold text-blue-700 mb-8" id="timer-display">25:00</div>
+            <div class="flex justify-center space-x-4">
+                <button id="start-timer-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300">Start</button>
+                <button id="pause-timer-btn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300">Pause</button>
+                <button id="reset-timer-btn" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300">Reset</button>
+            </div>
+            <p class="mt-6 text-gray-600" id="timer-status">Ready to study!</p>
+        </section>
+
+        <!-- Hosting Information -->
+        <section id="hosting-info" class="bg-gray-700 text-white p-8 rounded-lg shadow-lg border border-gray-600">
+            <h2 class="text-3xl font-bold mb-4 text-center">Hosting Information</h2>
+            <p class="text-lg text-center mb-4">You can host this website using free services like GitHub Pages, Netlify, Vercel, or Firebase Hosting.</p>
+            <p class="text-lg text-center font-bold">Hosted Link: <span class="text-blue-300">[Paste Your Hosted Link Here]</span></p>
+            <p class="text-lg text-center font-bold">Roll No: <span class="text-green-300">[Your Roll No Here]</span></p>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-6 mt-auto">
+        <div class="container mx-auto text-center text-sm px-4">
+            <p>&copy; 2025 Student Academic Planner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Navigation Active Link Script ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+
+            function updateActiveLink() {
+                let current = '';
+                sections.forEach(section => {
+                    // Get the top position of the section relative to the viewport
+                    const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+                    // Get the height of the section
+                    const sectionHeight = section.clientHeight;
+                    // Get the height of the fixed header to offset
+                    const headerOffset = document.querySelector('header').offsetHeight;
+
+                    // Check if the current scroll position is within the section,
+                    // adjusting for the fixed header
+                    if (window.pageYOffset >= sectionTop - headerOffset - 20 &&
+                        window.pageYOffset < sectionTop + sectionHeight - headerOffset - 20) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active'); // Remove active class from all links
+                    if (link.href.includes(current)) {
+                        link.classList.add('active'); // Add active class to the current section's link
+                    }
+                });
+            }
+
+            // Initial call and on scroll
+            updateActiveLink();
+            window.addEventListener('scroll', updateActiveLink);
+
+            // Smooth scroll for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+                    const targetId = this.getAttribute('href'); // Get the href value (e.g., "#home")
+                    const targetSection = document.querySelector(targetId); // Get the target section element
+                    const headerOffset = document.querySelector('header').offsetHeight; // Get header height
+
+                    if (targetSection) {
+                        // Calculate the position to scroll to, accounting for the fixed header
+                        const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth" // Smooth scroll animation
+                        });
+                    }
+                });
+            });
+        });
+
+
+        // --- Home Section - Motivational Quote Script ---
+        const motivationalQuotes = [
+            "\"The beautiful thing about learning is that no one can take it away from you.\" - B.B. King",
+            "\"Education is the most powerful weapon which you can use to change the world.\" - Nelson Mandela",
+            "\"The mind is not a vessel to be filled, but a fire to be kindled.\" - Plutarch",
+            "\"Success is not final, failure is not fatal: it is the courage to continue that counts.\" - Winston Churchill",
+            "\"Believe you can and you're halfway there.\" - Theodore Roosevelt"
+        ];
+        const quoteDisplay = document.getElementById('motivational-quote');
+        const changeQuoteBtn = document.getElementById('change-quote-btn');
+
+        function changeQuote() {
+            const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
+            quoteDisplay.textContent = motivationalQuotes[randomIndex];
+        }
+
+        changeQuoteBtn.addEventListener('click', changeQuote);
+
+
+        // --- Subjects Page - Display Subjects & Grades Script ---
+        // Simulating JSON data for subjects and grades
+        const subjectsData = [
+            { "name": "Operating Systems", "code": "CS301", "credits": 4, "grade": "A", "instructor": "Dr. V. Sharma" },
+            { "name": "Data Structures & Algorithms", "code": "CS302", "credits": 4, "grade": "B+", "instructor": "Prof. S. Kumar" },
+            { "name": "Database Management Systems", "code": "IT303", "credits": 3, "grade": "A-", "instructor": "Ms. P. Gupta" },
+            { "name": "Computer Networks", "code": "EC304", "credits": 4, "grade": "B", "instructor": "Dr. A. Singh" },
+            { "name": "Software Engineering", "code": "CS305", "credits": 3, "grade": "A", "instructor": "Prof. R. Menon" }
+        ];
+
+        const subjectsContainer = document.getElementById('subjects-container');
+
+        function displaySubjects() {
+            subjectsContainer.innerHTML = ''; // Clear previous content
+            subjectsData.forEach(subject => {
+                const subjectCard = document.createElement('div');
+                subjectCard.className = 'bg-blue-50 p-6 rounded-lg shadow-md border border-blue-100 transition duration-300 transform hover:scale-105';
+                subjectCard.innerHTML = `
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">${subject.name} (${subject.code})</h3>
+                    <p class="text-gray-700 mb-1">Credits: ${subject.credits}</p>
+                    <p class="text-gray-700 mb-1">Instructor: ${subject.instructor}</p>
+                    <p class="text-lg font-bold ${getGradeColorClass(subject.grade)}">Grade: ${subject.grade}</p>
+                `;
+                subjectsContainer.appendChild(subjectCard);
+            });
+        }
+
+        function getGradeColorClass(grade) {
+            if (grade.includes('A')) return 'text-green-600';
+            if (grade.includes('B')) return 'text-yellow-600';
+            if (grade.includes('C')) return 'text-orange-600';
+            return 'text-gray-600'; // Default for other grades or no grade
+        }
+
+        displaySubjects(); // Load subjects on page load
+
+
+        // --- To-Do List Script ---
+        const todoInput = document.getElementById('todo-input');
+        const addTodoBtn = document.getElementById('add-todo-btn');
+        const todoList = document.getElementById('todo-list');
+
+        let todos = JSON.parse(localStorage.getItem('todos')) || []; // Load from local storage
+
+        function saveTodos() {
+            localStorage.setItem('todos', JSON.stringify(todos)); // Save to local storage
+        }
+
+        function renderTodos() {
+            todoList.innerHTML = ''; // Clear existing list
+            todos.forEach((todo, index) => {
+                const listItem = document.createElement('li');
+                listItem.className = `flex items-center justify-between bg-gray-50 p-3 rounded-md border border-gray-200 shadow-sm`;
+                listItem.classList.toggle('completed', todo.completed); // Add completed class if true
+
+                listItem.innerHTML = `
+                    <div class="flex items-center flex-grow cursor-pointer todo-text">
+                        <input type="checkbox" data-index="${index}" ${todo.completed ? 'checked' : ''} class="mr-3 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="text-gray-800 flex-grow">${todo.text}</span>
+                    </div>
+                    <button data-index="${index}" class="delete-todo-btn bg-red-100 text-red-600 hover:bg-red-200 p-2 rounded-full transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1zm3 3a1 1 0 10-2 0v4a1 1 0 102 0v-4z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                `;
+                todoList.appendChild(listItem);
+            });
+        }
+
+        function addTodo() {
+            const taskText = todoInput.value.trim();
+            if (taskText !== '') {
+                todos.push({ text: taskText, completed: false });
+                todoInput.value = ''; // Clear input
+                saveTodos();
+                renderTodos();
+            }
+        }
+
+        function toggleTodoCompletion(e) {
+            if (e.target.type === 'checkbox') {
+                const index = parseInt(e.target.dataset.index);
+                todos[index].completed = e.target.checked;
+                saveTodos();
+                renderTodos();
+            } else if (e.target.closest('.todo-text')) { // Toggle completion on text click
+                const checkbox = e.target.closest('.todo-text').querySelector('input[type="checkbox"]');
+                checkbox.checked = !checkbox.checked;
+                const index = parseInt(checkbox.dataset.index);
+                todos[index].completed = checkbox.checked;
+                saveTodos();
+                renderTodos();
+            }
+        }
+
+        function deleteTodo(e) {
+            if (e.target.closest('.delete-todo-btn')) {
+                const index = parseInt(e.target.closest('.delete-todo-btn').dataset.index);
+                todos.splice(index, 1); // Remove item from array
+                saveTodos();
+                renderTodos();
+            }
+        }
+
+        addTodoBtn.addEventListener('click', addTodo);
+        todoInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                addTodo();
+            }
+        });
+        todoList.addEventListener('click', toggleTodoCompletion);
+        todoList.addEventListener('click', deleteTodo);
+
+        renderTodos(); // Load todos on page load
+
+
+        // --- Study Timer (Pomodoro) Script ---
+        const timerDisplay = document.getElementById('timer-display');
+        const startTimerBtn = document.getElementById('start-timer-btn');
+        const pauseTimerBtn = document.getElementById('pause-timer-btn');
+        const resetTimerBtn = document.getElementById('reset-timer-btn');
+        const timerStatus = document.getElementById('timer-status');
+
+        let timer; // Holds the setInterval ID
+        let timeLeft = 25 * 60; // 25 minutes in seconds
+        let isRunning = false;
+        let isStudyTime = true; // true for study, false for break
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        }
+
+        function updateTimerDisplay() {
+            timerDisplay.textContent = formatTime(timeLeft);
+        }
+
+        function startTimer() {
+            if (!isRunning) {
+                isRunning = true;
+                timerStatus.textContent = isStudyTime ? "Study time!" : "Break time!";
+                timer = setInterval(() => {
+                    timeLeft--;
+                    updateTimerDisplay();
+
+                    if (timeLeft <= 0) {
+                        clearInterval(timer);
+                        isRunning = false;
+                        if (isStudyTime) {
+                            timerStatus.textContent = "Time for a break!";
+                            timeLeft = 5 * 60; // 5 minute break
+                        } else {
+                            timerStatus.textContent = "Back to study!";
+                            timeLeft = 25 * 60; // 25 minute study
+                        }
+                        isStudyTime = !isStudyTime; // Toggle time type
+                        updateTimerDisplay();
+                        // Optional: Play a sound or show notification
+                    }
+                }, 1000);
+            }
+        }
+
+        function pauseTimer() {
+            clearInterval(timer);
+            isRunning = false;
+            timerStatus.textContent = isStudyTime ? "Study paused." : "Break paused.";
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            isRunning = false;
+            timeLeft = 25 * 60; // Reset to 25 minutes study time
+            isStudyTime = true;
+            updateTimerDisplay();
+            timerStatus.textContent = "Ready to study!";
+        }
+
+        startTimerBtn.addEventListener('click', startTimer);
+        pauseTimerBtn.addEventListener('click', pauseTimer);
+        resetTimerBtn.addEventListener('click', resetTimer);
+
+        updateTimerDisplay(); // Initialize display
+    </script>
+</body>
+</html>
 
