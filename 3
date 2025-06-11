@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Kalavanal Michael - Professional Resume</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and general body appearance */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f0f4f8; /* Light background for the whole page */
+            line-height: 1.6;
+        }
+        /* Style for interactive elements on hover */
+        .hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Specific styling for the table cells to align content */
+        .resume-table-cell {
+            vertical-align: top;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <!-- Main Resume Container -->
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+
+        <!-- Header Section -->
+        <header class="bg-gradient-to-r from-blue-600 to-indigo-800 text-white p-6 md:p-8 text-center rounded-t-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Don Kalavanal Michael</h1>
+            <p class="text-xl md:text-2xl font-light">Experienced Software Engineer | Full Stack Developer</p>
+            <div class="mt-4 text-sm md:text-base">
+                <p>Email: <a href="mailto:7dk.965@gmail.com" class="text-blue-200 hover:underline">7dk.965@gmail.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Location: City, State</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-blue-200 hover:underline">linkedin.com/in/yourprofile</a></p>
+                <p>GitHub: <a href="https://github.com/yourusername" target="_blank" class="text-blue-200 hover:underline">github.com/yourusername</a></p>
+            </div>
+        </header>
+
+        <!-- Professional Summary Section -->
+        <section class="p-6 md:p-8 bg-blue-50 border-b border-blue-100">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Professional Summary</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Highly motivated and results-oriented Software Engineer with 5+ years of experience in developing and deploying scalable web applications. Proficient in a wide range of technologies, including front-end frameworks (React, Vue.js), back-end languages (Python, Node.js), and database systems (SQL, NoSQL). Adept at problem-solving, team collaboration, and delivering high-quality software solutions.
+            </p>
+        </section>
+
+        <!-- Experience Section (using a table for structure) -->
+        <section class="p-6 md:p-8 bg-white border-b border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Experience</h2>
+
+            <table class="w-full border-collapse">
+                <!-- Job Role 1 -->
+                <tr class="border-b border-gray-200">
+                    <td class="resume-table-cell w-1/4">
+                        <p class="font-semibold text-lg text-blue-700">Software Engineer</p>
+                        <p class="text-sm text-gray-600">Jan 2022 – Present</p>
+                    </td>
+                    <td class="resume-table-cell w-3/4">
+                        <p class="font-semibold text-lg text-gray-800">Tech Solutions Inc. <span class="text-gray-500 text-base font-normal">(Remote)</span></p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                            <li>Developed and maintained full-stack web applications using **React, Node.js, and MongoDB**, resulting in a 20% improvement in user engagement.</li>
+                            <li>Implemented RESTful APIs and integrated third-party services, enhancing system functionality and data flow.</li>
+                            <li>Collaborated with product managers and designers to translate business requirements into technical specifications.</li>
+                            <li>Participated in code reviews, ensuring code quality, maintainability, and adherence to best practices.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <!-- Job Role 2 -->
+                <tr class="border-b border-gray-200">
+                    <td class="resume-table-cell w-1/4">
+                        <p class="font-semibold text-lg text-green-700">Junior Developer</p>
+                        <p class="text-sm text-gray-600">Jul 2019 – Dec 2021</p>
+                    </td>
+                    <td class="resume-table-cell w-3/4">
+                        <p class="font-semibold text-lg text-gray-800">Innovate Digital Agency <span class="text-gray-500 text-base font-normal">(New York, NY)</span></p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                            <li>Assisted in the development of client websites using **HTML, CSS, JavaScript, and jQuery**.</li>
+                            <li>Optimized web pages for performance and responsiveness across various devices.</li>
+                            <li>Wrote clean, well-documented, and efficient code.</li>
+                            <li>Resolved reported bugs and performed routine maintenance on existing applications.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Education Section -->
+        <section class="p-6 md:p-8 bg-indigo-50 border-b border-indigo-100">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Education</h2>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Master of Science in Computer Science</h3>
+                    <p class="text-gray-700">University Name, City, State</p>
+                </div>
+                <p class="text-gray-600 md:text-right mt-2 md:mt-0">Graduated: May 2019</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Bachelor of Technology in Information Technology</h3>
+                    <p class="text-gray-700">Another University, City, State</p>
+                </div>
+                <p class="text-gray-600 md:text-right mt-2 md:mt-0">Graduated: May 2017</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="p-6 md:p-8 bg-white border-b border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Technical Skills</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Languages:</strong> JavaScript (ES6+), Python, HTML5, CSS3, SQL</li>
+                        <li><strong>Front-end:</strong> React, Vue.js, Tailwind CSS, Bootstrap, jQuery</li>
+                        <li><strong>Back-end:</strong> Node.js, Express.js, Django, Flask</li>
+                        <li><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL</li>
+                        <li><strong>Cloud Platforms:</strong> AWS (EC2, S3, Lambda), Azure</li>
+                        <li><strong>Tools & Version Control:</strong> Git, Docker, npm, Webpack, VS Code</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Soft Skills</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Problem-Solving</li>
+                        <li>Team Collaboration</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                        <li>Time Management</li>
+                        <li>Critical Thinking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="p-6 md:p-8 bg-yellow-50 border-b border-yellow-100">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Projects</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-4">
+                <li>
+                    <h3 class="text-xl font-semibold text-gray-800">E-commerce Platform</h3>
+                    <p>
+                        Developed a full-featured e-commerce website using **React, Node.js, Express, and MongoDB**. Features include user authentication, product catalog, shopping cart, and payment integration.
+                        <a href="https://github.com/yourusername/ecommerce-project" target="_blank" class="text-blue-600 hover:underline text-sm ml-2">View Project</a>
+                    </p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold text-gray-800">AI-Powered Chatbot</h3>
+                    <p>
+                        Created an intelligent chatbot using **Python and natural language processing (NLP)**. The chatbot provides customer support and answers frequently asked questions.
+                        <a href="https://github.com/yourusername/chatbot-project" target="_blank" class="text-blue-600 hover:underline text-sm ml-2">View Project</a>
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Footer / Call to Action -->
+        <footer class="bg-gray-800 text-white p-6 md:p-8 text-center rounded-b-lg">
+            <p class="text-lg mb-4">I'm actively seeking new opportunities. Feel free to reach out!</p>
+            <a href="mailto:7dk.965@gmail.com" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Contact Me</a>
+        </footer>
+    </div>
+</body>
+</html>
 
