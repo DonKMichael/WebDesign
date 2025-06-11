@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2x2 Grid Layout</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for better readability and centering */
+        body {
+            font-family: "Inter", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure full viewport height */
+            margin: 0;
+            background-color: #f0f4f8; /* Light gray background for the page */
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Main container for the 2x2 grid.
+        Uses Tailwind's 'grid' layout to create two rows and two columns.
+        'grid-rows-2' creates 2 rows.
+        'grid-cols-2' creates 2 columns.
+        'w-full h-full' makes the grid fill the parent container (which is min-h-screen due to body styling).
+        'max-w-screen-lg' limits the maximum width on larger screens for better aesthetics.
+        'rounded-lg' adds rounded corners to the main container.
+        'shadow-xl' adds a subtle shadow for depth.
+    -->
+    <div class="grid grid-rows-2 grid-cols-2 w-[90vw] h-[90vh] max-w-screen-xl rounded-lg shadow-xl overflow-hidden">
+        <!--
+            Grid Cell 1: Top-Left
+            'bg-blue-300' sets a light blue background color.
+            'flex items-center justify-center' centers the text within the div.
+            'text-white font-bold text-2xl md:text-3xl p-4' styles the text.
+            'rounded-tl-lg' rounds the top-left corner specifically for this cell.
+        -->
+        <div class="bg-blue-300 flex items-center justify-center text-white font-bold text-2xl md:text-3xl p-4 rounded-tl-lg">
+            Frame 1 (Top-Left)
+        </div>
+
+        <!--
+            Grid Cell 2: Top-Right
+            'bg-green-300' sets a light green background color.
+            'rounded-tr-lg' rounds the top-right corner.
+        -->
+        <div class="bg-green-300 flex items-center justify-center text-white font-bold text-2xl md:text-3xl p-4 rounded-tr-lg">
+            Frame 2 (Top-Right)
+        </div>
+
+        <!--
+            Grid Cell 3: Bottom-Left
+            'bg-yellow-300' sets a light yellow background color.
+            'rounded-bl-lg' rounds the bottom-left corner.
+        -->
+        <div class="bg-yellow-300 flex items-center justify-center text-white font-bold text-2xl md:text-3xl p-4 rounded-bl-lg">
+            Frame 3 (Bottom-Left)
+        </div>
+
+        <!--
+            Grid Cell 4: Bottom-Right
+            'bg-red-300' sets a light red background color.
+            'rounded-br-lg' rounds the bottom-right corner.
+        -->
+        <div class="bg-red-300 flex items-center justify-center text-white font-bold text-2xl md:text-3xl p-4 rounded-br-lg">
+            Frame 4 (Bottom-Right)
+        </div>
+    </div>
+</body>
+</html>
 
