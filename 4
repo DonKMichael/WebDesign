@@ -19,6 +19,16 @@
             color: #2563eb; /* Blue color for active link */
             border-bottom: 2px solid #2563eb;
         }
+        /* Style for the canvas to ensure it fits responsively */
+        #heroCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5; /* Ensure it's below the text overlay but above the background */
+            background-color: rgba(0,0,0,0); /* Transparent background for canvas */
+        }
     </style>
 </head>
 <body>
@@ -38,10 +48,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://placehold.co/1920x1080/285E61/FFFFFF?text=Scenic+View+of+Pala'); background-attachment: fixed; margin-top: 64px;">
+    <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/63/Pala_town.jpg'); background-attachment: fixed; margin-top: 64px;">
+        <!-- Canvas element added here -->
+        <canvas id="heroCanvas"></canvas>
         <!-- Overlay for better text readability -->
-        <div class="absolute inset-0 bg-black opacity-60"></div>
-        <div class="container mx-auto text-center relative z-10 p-6 rounded-xl bg-gray-900 bg-opacity-70 shadow-2xl">
+        <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+        <div class="container mx-auto text-center relative z-20 p-6 rounded-xl bg-gray-900 bg-opacity-70 shadow-2xl">
             <h2 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down">Discover the Charm of <span class="text-emerald-300">Pala</span></h2>
             <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">A vibrant town in Kerala, known for its rich cultural heritage and beautiful landscapes.</p>
             <a href="#about" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Learn More About Us</a>
@@ -54,7 +66,7 @@
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">About Pala</h2>
             <div class="flex flex-col md:flex-row items-center justify-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <img src="https://placehold.co/600x400/6EE7B7/065F46?text=Pala+Landmark" alt="Pala Landmark" class="w-full h-auto rounded-lg shadow-lg object-cover">
+                    <img src="https://i.pinimg.com/736x/b3/54/11/b35411697e818eadf99a7fd1e97afab4.jpg" alt="Pala Landmark" class="w-full h-auto rounded-lg shadow-lg object-cover">
                 </div>
                 <div class="md:w-1/2">
                     <p class="text-gray-700 leading-relaxed text-lg mb-4">
@@ -75,7 +87,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Attraction 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
-                    <img src="https://placehold.co/400x250/C7D2FE/4F46E5?text=St.+Thomas+Cathedral" alt="St. Thomas Cathedral" class="w-full h-48 object-cover rounded-md mb-4">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_msSVW3E60IKnA5PP7wgME28XkM-ZwScJH6H4LCimJySg=s900-c-k-c0x00ffffff-no-rj" alt="St. Thomas Cathedral" class="w-full h-48 object-cover rounded-md mb-4">
                     <h3 class="text-2xl font-semibold text-teal-700 mb-2">St. Thomas Cathedral</h3>
                     <p class="text-gray-700 leading-relaxed">
                         A magnificent church, one of the oldest and most revered landmarks in Pala, known for its stunning architecture and historical significance.
@@ -83,7 +95,7 @@
                 </div>
                 <!-- Attraction 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
-                    <img src="https://placehold.co/400x250/FEE2E2/EF4444?text=Meenachil+River" alt="Meenachil River" class="w-full h-48 object-cover rounded-md mb-4">
+                    <img src="https://www.keralaorbit.in/image/Kerala-River-feature-Image-1024x423.jpg" alt="Meenachil River" class="w-full h-48 object-cover rounded-md mb-4">
                     <h3 class="text-2xl font-semibold text-emerald-700 mb-2">The Scenic Meenachil River</h3>
                     <p class="text-gray-700 leading-relaxed">
                         Enjoy serene views along the Meenachil River, which flows through Pala, offering picturesque spots for relaxation and local life.
@@ -91,7 +103,7 @@
                 </div>
                 <!-- Attraction 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
-                    <img src="https://placehold.co/400x250/D1FAE5/059669?text=Kadappattoor+Church" alt="Kadappattoor Church" class="w-full h-48 object-cover rounded-md mb-4">
+                    <img src="https://img-mm.manoramaonline.com/content/dam/mm/ml/astrology/astro-news/images/2017/12/5/kadappattooor-temple.jpg.image.784.410.jpg" alt="Kadappattoor Church" class="w-full h-48 object-cover rounded-md mb-4">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Kadappattoor Sree Mahadeva Temple</h3>
                     <p class="text-gray-700 leading-relaxed">
                         A renowned ancient temple dedicated to Lord Shiva, attracting devotees and visitors with its spiritual ambiance and traditional architecture.
@@ -167,7 +179,38 @@
                 }
             });
         });
+
+        // Canvas drawing logic
+        window.addEventListener('load', () => {
+            const canvas = document.getElementById('heroCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Function to set canvas dimensions to match its parent container
+            const resizeCanvas = () => {
+                canvas.width = canvas.parentElement.clientWidth;
+                canvas.height = canvas.parentElement.clientHeight;
+                drawCanvasContent(); // Redraw content after resize
+            };
+
+            // Function to draw content on the canvas
+            const drawCanvasContent = () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous content
+
+                // Example: Draw "Welcome to Pala!" text on canvas
+                ctx.font = 'bold 48px Inter, sans-serif';
+                ctx.fillStyle = '#FFFFFF'; // White color for text
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                // Adjust text position slightly below the center for better visibility if hero text is also present
+                ctx.fillText('Explore with us!', canvas.width / 2, canvas.height / 2 + 100);
+            };
+
+            // Initial resize and draw
+            resizeCanvas();
+
+            // Add event listener for window resize to make canvas responsive
+            window.addEventListener('resize', resizeCanvas);
+        });
     </script>
 </body>
 </html>
-
